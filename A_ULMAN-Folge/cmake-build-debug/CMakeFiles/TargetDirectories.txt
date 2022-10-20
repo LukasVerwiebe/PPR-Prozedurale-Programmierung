@@ -1,0 +1,3 @@
+C:/Ordner/GitHub_Repositorys/PPR-Prozedurale-Programmierung/A_ULMAN-Folge/cmake-build-debug/CMakeFiles/A_ULMAN_Folge.dir
+C:/Ordner/GitHub_Repositorys/PPR-Prozedurale-Programmierung/A_ULMAN-Folge/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Ordner/GitHub_Repositorys/PPR-Prozedurale-Programmierung/A_ULMAN-Folge/cmake-build-debug/CMakeFiles/rebuild_cache.dir
