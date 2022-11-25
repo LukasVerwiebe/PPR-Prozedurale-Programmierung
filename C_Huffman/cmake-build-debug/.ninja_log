@@ -1,0 +1,25 @@
+# ninja log v5
+2	69	6909481206655700	CMakeFiles/C_Huffman.dir/io.c.obj	894342183b2265dc
+1	50	6909413070248302	CMakeFiles/C_Huffman.dir/huffman.c.obj	d4161fbc2dddeb05
+6	70	6909481206655700	CMakeFiles/C_Huffman.dir/main.c.obj	2edcdd2e7e9b55bd
+70	143	6909481207374832	C_Huffman.exe	8c55521a35996b9
+4	104	6909490050967563	CMakeFiles/C_Huffman.dir/io.c.obj	894342183b2265dc
+8	105	6909490050957333	CMakeFiles/C_Huffman.dir/main.c.obj	2edcdd2e7e9b55bd
+105	188	6909490051787815	C_Huffman.exe	8c55521a35996b9
+2	63	6909490459295875	CMakeFiles/C_Huffman.dir/main.c.obj	2edcdd2e7e9b55bd
+63	136	6909490460001228	C_Huffman.exe	8c55521a35996b9
+1	60	6909490850659639	CMakeFiles/C_Huffman.dir/main.c.obj	2edcdd2e7e9b55bd
+60	133	6909490851357514	C_Huffman.exe	8c55521a35996b9
+2	62	6909491006420461	CMakeFiles/C_Huffman.dir/main.c.obj	2edcdd2e7e9b55bd
+63	138	6909491007144821	C_Huffman.exe	8c55521a35996b9
+1	66	6909491745397294	CMakeFiles/C_Huffman.dir/io.c.obj	894342183b2265dc
+4	71	6909491745450907	CMakeFiles/C_Huffman.dir/main.c.obj	2edcdd2e7e9b55bd
+71	144	6909491746145523	C_Huffman.exe	8c55521a35996b9
+2	69	6909499817169475	CMakeFiles/C_Huffman.dir/io.c.obj	894342183b2265dc
+5	71	6909499817169475	CMakeFiles/C_Huffman.dir/main.c.obj	2edcdd2e7e9b55bd
+71	147	6909499817928643	C_Huffman.exe	8c55521a35996b9
+2	77	6909499952159958	CMakeFiles/C_Huffman.dir/io.c.obj	894342183b2265dc
+7	79	6909499952179960	CMakeFiles/C_Huffman.dir/main.c.obj	2edcdd2e7e9b55bd
+79	157	6909499952949938	C_Huffman.exe	8c55521a35996b9
+2	63	6909500105882919	CMakeFiles/C_Huffman.dir/main.c.obj	2edcdd2e7e9b55bd
+64	137	6909500106592898	C_Huffman.exe	8c55521a35996b9

@@ -1,0 +1,3 @@
+C:/Ordner/GitHub_Repositorys/PPR-Prozedurale-Programmierung/C_Huffman/cmake-build-debug/CMakeFiles/C_Huffman.dir
+C:/Ordner/GitHub_Repositorys/PPR-Prozedurale-Programmierung/C_Huffman/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Ordner/GitHub_Repositorys/PPR-Prozedurale-Programmierung/C_Huffman/cmake-build-debug/CMakeFiles/rebuild_cache.dir
