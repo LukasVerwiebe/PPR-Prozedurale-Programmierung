@@ -1,9 +1,24 @@
+/*
+ * PPR-Praktikum: Aufgabe 1 (ULAM-Folge)
+ * Programm zur Berechnung der ULAM-Folge
+ * Autor: Lukas Verwiebe
+ */
 #include <stdio.h>
 
+/**
+ * Funktionsdefinition:
+ */
+// Teilaufgabe 1.1:
 int ulam_max(int a0);
+// Teilaufgabe 1.2:
 int ulam_twins(int limit);
+// Teilaufgabe 1.3:
 int ulam_multiples(int limit, int number);
 
+/**
+ * Main Funktion zur Eingabe und Ausgabe von Werten in die Funktionen
+ * @return
+ */
 int main()
 {
 	printf("%i\n", ulam_max(5));
@@ -17,11 +32,21 @@ int main()
 	printf("%i\n", ulam_multiples(10, 2));
 	printf("%i\n", ulam_multiples(1000, 3));
 	printf("%i\n", ulam_multiples(108, 3));
-	printf("%i\n", ulam_multiples(1391, 6));
+	printf("%i\n", ulam_multiples(391, 6));
 
 	return 0;
 }
 
+/**
+ * Teilaufgabe 1.1: C-Funktion zur Ausgabe des maximalen Wertes in der ULAM-Folge.
+ * Die Funktion berechnet die Zahlen der Folge und überschreibt den Integer zwischenspeicher jedes Mal,
+ * wenn die berechnete Zahl größer als die vorherige Zahl ist. Dieser wird dann als Ergebnis ausgegeben.
+ *
+ * Sollte die berechnete oder eingegebene Zahl kleiner oder gleich 0 sein wird als Rückgabe Wert die -1 zurückgegeben
+ * und die Schleife wird gestoppt.
+ * @param a0
+ * @return
+ */
 int ulam_max(int a0)
 {
 	int storage = 0;
@@ -51,6 +76,16 @@ int ulam_max(int a0)
 	return storage;
 }
 
+/**
+ * Teilaufgabe 1.2: C-Funktion die prüft, ob es im Intervall von 1 bis einschließlich limit zwei benachbarte
+ * Werte a0 und a0 + 1 gibt. Ein solches Paar wird als ULAM-Zwilling bezeichnet.
+ *
+ * Die Funktion soll a0 liefern, wenn ein Paar gefunden wurde und a0 der kleinere Wert in einem solchen Paar ist.
+ * Sind mehrere Paare im Intervall enthalten, soll das letzte Paar gesucht werden. Die Funktion soll -1 zurückgeben,
+ * wenn kein solches Zwillingspaar gefunden wurde:
+ * @param limit
+ * @return
+ */
 int ulam_twins(int limit)
 {
 	int storage = -1;
@@ -73,7 +108,54 @@ int ulam_twins(int limit)
 	return storage;
 }
 
+/**
+ * Teilaufgabe 1.1: C-Funktion die prüft, ob im Intervall von 1 bis einschließlich limit ULAM-Mehrlinge mit
+ * der Anzahl number vollständig enthalten sind.
+ *
+ * Die Funktion soll a0 liefern, wenn Mehrlinge gefunden wurden und a0 der kleinste Wert ist, der zu den Mehrlingen
+ * gehört. Sind weitere Mehrlingsgruppen vollständig im Intervall enthalten, soll der kleinste Wert der letzten Gruppe
+ * zurück gegeben werden. Die Funktion soll -1 zurückgeben, wenn die Parameter nicht sinnvoll sind oder keine solchen
+ * Mehrlinge gefunden wurden.
+ * @param limit
+ * @param number
+ * @return
+ */
 int ulam_multiples(int limit, int number)
 {
-	
+	// Zwischenablage für die Werte:
+	int storage = -1;
+	int storage_1;
+	int storage_2;
+	int value;
+	int i;
+	int j;
+
+	// Äußere Schleife: Steuerung des Zählers
+	for (i = 1; i < limit - number + 2; i++)
+	{
+		value = 1;
+		// Innere Schleife: Prüfung der einzelnen Stellen und Speicherung wenn Anzahl korrekt
+		for (j = 1; j < number; j++)
+		{
+			// Berechnung Start Max Wert
+			storage_1 = ulam_max(i);
+			// Berechnung benachbarter Max Wert
+			storage_2 = ulam_max(i + j);
+
+			// Prüfung ob Werte gleich und ob die Zahlen benachbart sind, wenn, ja dann Wert setzten
+			if (storage_2 == storage_1)
+			{
+				// Zähler erhöhen für Vergleich mit number
+				value = value + 1;
+			}
+			// Prüfung ob der Zähler gleich der eingegebenen Anzahl ist
+			if (value == number)
+			{
+				// Wert für die Rückgabe ablegen
+				storage = i;
+			}
+		}
+	}
+	// Rückgabe von a0
+	return storage;
 }
