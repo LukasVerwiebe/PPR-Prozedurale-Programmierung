@@ -1,0 +1,3 @@
+C:/Ordner/GitHub_Repositorys/PPR-Prozedurale-Programmierung/ZZ_Uebungen/AB_Uebung_2/cmake-build-debug/CMakeFiles/AB_Uebung_2.dir
+C:/Ordner/GitHub_Repositorys/PPR-Prozedurale-Programmierung/ZZ_Uebungen/AB_Uebung_2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Ordner/GitHub_Repositorys/PPR-Prozedurale-Programmierung/ZZ_Uebungen/AB_Uebung_2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,3 @@
+C:/Ordner/GitHub_Repositorys/PPR-Prozedurale-Programmierung/E_calculator/cmake-build-debug/CMakeFiles/E_calculator.dir
+C:/Ordner/GitHub_Repositorys/PPR-Prozedurale-Programmierung/E_calculator/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Ordner/GitHub_Repositorys/PPR-Prozedurale-Programmierung/E_calculator/cmake-build-debug/CMakeFiles/rebuild_cache.dir

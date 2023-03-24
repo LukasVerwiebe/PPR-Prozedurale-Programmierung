@@ -15,6 +15,11 @@ int ulam_twins(int limit);
 // Teilaufgabe 1.3:
 int ulam_multiples(int limit, int number);
 
+
+int ulam_multiples_1(int limit, int number);
+int ulam_multiples_2(int limit, int number);
+
+
 /**
  * Main Funktion zur Eingabe und Ausgabe von Werten in die Funktionen
  * @return
@@ -33,6 +38,11 @@ int main()
 	printf("%i\n", ulam_multiples(1000, 3));
 	printf("%i\n", ulam_multiples(108, 3));
 	printf("%i\n", ulam_multiples(391, 6));
+	printf("\n");
+	printf("%i\n", ulam_multiples_2(10, 2));
+	printf("%i\n", ulam_multiples_2(1000, 3));
+	printf("%i\n", ulam_multiples_2(108, 3));
+	printf("%i\n", ulam_multiples_2(391, 6));
 
 	return 0;
 }
@@ -158,4 +168,79 @@ int ulam_multiples(int limit, int number)
 	}
 	// Rückgabe von a0
 	return storage;
+}
+
+
+
+/**
+ * Musterlösungen aus der Vorlesung
+ */
+
+int ulam_multiples_1(int limit, int number)
+{
+	int multiples_index = -1;
+	int i;
+	int j;
+	int count;
+
+	if(limit < 1 || number <= 1)
+	{
+		return -1;
+	}
+
+	for(i = 1; i < limit - number + 2; i++)
+	{
+		count = 1;
+		for(j = 1; j < number; j++)
+		{
+			if(ulam_max(i) == ulam_max(i + j))
+			{
+				count++;
+			}
+		}
+		if(count == number)
+		{
+			multiples_index = i;
+		}
+	}
+
+	return multiples_index;
+}
+
+int ulam_multiples_2(int limit, int number)
+{
+	int ulam_max_1;
+	int ulam_max_2;
+	int count;
+	int multiples_index;
+	int i;
+
+	if(number <= 1 || limit < number)
+	{
+		return -1;
+	}
+
+	multiples_index = -1;
+
+	ulam_max_1 = ulam_max(limit);
+	count = 1;
+	for(i = limit - 1; i >= 0 && multiples_index == -1; i--)
+	{
+		ulam_max_2 = ulam_max(i);
+		if(ulam_max_1 == ulam_max_2)
+		{
+			count += 1;
+		}
+		else
+		{
+			ulam_max_1 = ulam_max_2;
+			count = 1;
+		}
+
+		if(count == number)
+		{
+			multiples_index = i;
+		}
+	}
+	return multiples_index;
 }
