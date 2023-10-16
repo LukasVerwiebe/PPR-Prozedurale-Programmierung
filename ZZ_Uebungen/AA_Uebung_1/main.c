@@ -96,7 +96,7 @@ int main()
 	printf("\n");
 
 	char *c[] = {"ENTER", "NEW", "POINT", "FIRST"};
-	char **cp[] = {c+3, c+2, c+1, c};
+	char **cp[] = {c+3, c+2, c+2, c};
 	char ***cpp = cp;
 
 	printf("**++cpp: %s\n", **++cpp);
@@ -104,11 +104,12 @@ int main()
 	//printf("*--cpp: %s\n", *--cpp);
 	//printf("*--*cpp: %s\n", *--*cpp);
 	//printf("**++cpp: %s\n", **++cpp);
+	//printf("*--*cpp: %s\n", *--*cpp);
 	//printf("*--*++cpp: %s\n", *--*++cpp);
 	printf("*--*++cpp+3: %s\n", *--*++cpp+3);
 	printf("\n");
-	//printf("*cpp: %s\n", *cpp);
-	//printf("*cpp[-2]: %s\n", *cpp[-2]);
+	//printf("*cpp: %s\n", **cpp);
+	printf("*cpp[-2]: %s\n", *cpp[1]);
 	printf("*cpp[-2]+3: %s\n", *cpp[-2]+3);
 	printf("\n");
 	//printf("cpp[-1]: %s\n", cpp[-1]);
